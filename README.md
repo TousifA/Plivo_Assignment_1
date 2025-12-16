@@ -1,34 +1,60 @@
-# 📞 Plivo IVR Demo (Node.js)
+# 📞 Plivo IVR Assignment – Node.js
 
-This project is a **multi-level IVR (Interactive Voice Response) system** built using **Node.js**, **Express**, and **Plivo Voice APIs**.  
-It demonstrates outbound calling, DTMF input handling, language selection, and call routing using **Plivo XML**.
+This repository contains a **multi-level IVR (Interactive Voice Response) system**
+built as part of a **Plivo Voice API assignment** using **Node.js** and **Express**.
+
+The application demonstrates how to:
+- Initiate outbound calls using Plivo
+- Handle call webhooks using Plivo XML
+- Collect DTMF input
+- Route calls based on user input
+- Expose local services securely using ngrok
 
 ---
 
-## 🚀 Features
+## 🎯 Assignment Objective
 
-- Outbound call initiation using Plivo API
-- Public webhook handling via **ngrok**
-- Level 1 IVR:
-  - Language selection (English / Spanish)
-- Level 2 IVR:
-  - Play an audio message
-  - Connect to a live associate
-- DTMF-based user input handling
+To design and implement a **Plivo-based IVR system** that:
+- Initiates outbound calls
+- Plays voice prompts
+- Accepts user input via keypad (DTMF)
+- Routes calls to different actions based on input
+
+---
+
+## 🚀 Features Implemented
+
+- Outbound call initiation using Plivo REST API
+- Webhook handling via `/answer` endpoint
+- Multi-level IVR using Plivo XML
+- Language selection (English / Spanish)
+- Audio playback option
+- Live associate call transfer option
+- Retry handling for invalid inputs
 - Secure configuration using environment variables
 
 ---
 
-## 🛠 Tech Stack
+## 🛠 Technology Stack
 
 - **Node.js**
 - **Express.js**
 - **Plivo Node SDK**
+- **Plivo XML**
 - **ngrok**
 - **dotenv**
-- **body-parser**
 
 ---
 
 ## 📁 Project Structure
-
+Plivo_Assignment_1/
+│
+├── src/
+│ └── index.js # Main IVR logic and webhook handling
+│
+├── public/
+│ └── index.html # UI to trigger outbound calls
+│
+├── .gitignore
+├── package.json
+├── README.md
